@@ -1,0 +1,17 @@
+.avatar {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  box-shadow: 0 0.1rem 0.4rem 0.3rem rgba($color-black, 0.5);
+}
+
+@media only screen and (min-width: $sm) {
+  .avatar {
+    height: 7rem;
+    width: 7rem;
+  }
+}

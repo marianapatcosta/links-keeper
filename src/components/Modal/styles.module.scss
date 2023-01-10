@@ -1,0 +1,133 @@
+.modal {
+  &__overlay {
+    position: fixed;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0rem;
+    z-index: 100;
+    background-color: rgba($color-black, 0.75);
+  }
+
+  &__content {
+    background-color: var(--primary-color, $color-primary);
+    box-shadow: 0 0.125rem 0.5rem rgba($color-black, 0.7);
+    margin: auto auto 0;
+    padding: 1rem 1rem 0.5rem;
+    color: var(--font-color, $color-font);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: max-content;
+    max-height: 80vh;
+    left: 0;
+    right: 0;
+    animation: enter-mobile 0.3s ease-in forwards;
+    -webkit-animation: enter-mobile 0.3s ease-in forwards;
+
+    &--closing {
+      animation: exit-mobile 0.3s ease-out forwards;
+      -webkit-animation: exit-mobile 0.3s ease-out forwards;
+    }
+  }
+
+  &__main {
+    display: flex;
+    max-height: 30rem;
+    margin: 1rem 0;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__footer {
+    margin-top: 1.5rem;
+  }
+
+  &__bottom-bar {
+    height: 0.2rem;
+    width: 7rem;
+    min-width: 5rem;
+    background-color: $color-grey;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: $xs) {
+  .modal {
+    &__content {
+      border-radius: 1rem;
+      -webkit-border-radius: 1rem;
+      -moz-border-radius: 1rem;
+      -ms-border-radius: 1rem;
+      -o-border-radius: 1rem;
+      margin: 8rem auto;
+      bottom: initial;
+      min-width: 22rem;
+      padding: 1.25rem;
+      width: max-content;
+      animation: enter 0.3s ease-in forwards;
+      -webkit-animation: enter 0.3s ease-in forwards;
+
+      &--closing {
+        animation: exit 0.3s ease-out forwards;
+        -webkit-animation: exit 0.3s ease-out forwards;
+      }
+    }
+
+    &__bottom-bar {
+      display: none;
+    }
+  }
+}
+
+@mixin translateY($value) {
+  transform: translateY($value);
+  -webkit-transform: translateY($value);
+  -moz-transform: translateY($value);
+  -ms-transform: translateY($value);
+  -o-transform: translateY($value);
+}
+
+@keyframes enter {
+  0% {
+    @include translateY(110vh);
+  }
+
+  100% {
+    @include translateY(0);
+  }
+}
+
+@keyframes exit {
+  0% {
+    @include translateY(0);
+  }
+
+  100% {
+    @include translateY(110vh);
+  }
+}
+
+@keyframes enter-mobile {
+  0% {
+    @include translateY(-110vh);
+  }
+
+  100% {
+    @include translateY(0);
+  }
+}
+
+@keyframes exit-mobile {
+  0% {
+    @include translateY(0);
+  }
+
+  100% {
+    @include translateY(-110vh);
+  }
+}

@@ -1,0 +1,53 @@
+.input {
+  p {
+    margin-bottom: 0.25rem;
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    height: 2.5rem;
+    line-height: 1.5rem;
+    margin-left: 1px;
+    border: 0.0625rem solid var(--secondary-color, $color-secondary);
+    border-radius: 0.5rem;
+    background-color: inherit;
+    color: inherit;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.2rem rgba($color-black, 0.5);
+    padding-left: 0.5rem;
+
+    &:disabled {
+      user-select: none;
+      cursor: default;
+      opacity: 0.7;
+    }
+
+    &:focus {
+      outline: 1px solid var(--secondary-color, $color-secondary);
+      box-shadow: 0 0 3px var(--secondary-color, $color-secondary);
+    }
+
+    &[type='color'] {
+      border: none;
+      box-shadow: none;
+    }
+  }
+
+  &--error {
+    input {
+      border: 0.0625rem solid $color-red;
+    }
+  }
+
+  &__error {
+    font-size: $font-small;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    padding-left: 0.5rem;
+    color: $color-red;
+  }
+}

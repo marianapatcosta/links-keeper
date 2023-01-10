@@ -1,0 +1,18 @@
+.avatar-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  position: relative;
+
+  h1 {
+    font-size: $font-large;
+  }
+
+  &__actions {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

@@ -1,0 +1,41 @@
+.qrcode-modal {
+  &__header {
+    img {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    h1,
+    p {
+      font-size: $font-small;
+    }
+
+    &--printing {
+      display: none;
+    }
+  }
+
+  &--printing {
+    footer {
+      & div:last-child {
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $sm) {
+  .qrcode-modal {
+    &__header {
+      img {
+        width: 5rem;
+        height: 5rem;
+      }
+
+      h1,
+      p {
+        font-size: $font-regular;
+      }
+    }
+  }
+}

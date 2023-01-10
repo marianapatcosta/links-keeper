@@ -1,0 +1,110 @@
+.colors-picker {
+  padding: 0.75rem;
+  box-shadow: 0 0.1rem 0.4rem 0.3rem rgba($color-black, 0.5);
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  height: 2.5rem;
+  line-height: 1rem;
+  transition: height 0.2s ease-in-out;
+  -webkit-transition: height 0.2s ease-in-out;
+  -moz-transition: height 0.2s ease-in-out;
+  -ms-transition: height 0.2s ease-in-out;
+  -o-transition: height 0.2s ease-in-out;
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+    height: 0rem;
+    transition: height 0.2s ease-in-out;
+    -webkit-transition: height 0.2s ease-in-out;
+    -moz-transition: height 0.2s ease-in-out;
+    -ms-transition: height 0.2s ease-in-out;
+    -o-transition: height 0.2s ease-in-out;
+
+    & input {
+      width: 5rem;
+    }
+
+    & label p {
+      padding-left: 0.7rem;
+      margin-bottom: 0;
+      text-transform: capitalize;
+      font-size: $font-small;
+    }
+
+    & > div {
+      margin-bottom: auto;
+    }
+
+    & > div,
+    & input {
+      opacity: 0;
+      height: 0rem;
+      transition: height 0.2s linear;
+      -webkit-transition: height 0.2s linear;
+      -moz-transition: height 0.2s linear;
+      -ms-transition: height 0.2s linear;
+      -o-transition: height 0.2s linear;
+}
+  }
+
+  &[open] {
+    height: 6.5rem;
+    transition: height 0.2s ease-in-out;
+    -webkit-transition: height 0.2s ease-in-out;
+    -moz-transition: height 0.2s ease-in-out;
+    -ms-transition: height 0.2s ease-in-out;
+    -o-transition: height 0.2s ease-in-out;
+  }
+
+  &[open] > div {
+    height: 3rem;
+    transition: height 0.2s ease-in-out;
+    -webkit-transition: height 0.2s ease-in-out;
+    -moz-transition: height 0.2s ease-in-out;
+    -ms-transition: height 0.2s ease-in-out;
+    -o-transition: height 0.2s ease-in-out;
+
+    & > div,
+    & input {
+      opacity: 1;
+      height: 2rem;
+      transition: height 0.2s linear;
+      -webkit-transition: height 0.2s linear;
+      -moz-transition: height 0.2s linear;
+      -ms-transition: height 0.2s linear;
+      -o-transition: height 0.2s linear;
+}
+  }
+
+  @supports not (-ms-ime-align: auto) {
+    & > summary {
+      cursor: pointer;
+      list-style-type: none;
+
+      svg {
+        margin-right: 0.5rem;
+        transform: rotate(-180deg);
+        transition: transform 0.2s ease-in-out;
+        -webkit-transition: transform 0.2s ease-in-out;
+        -moz-transition: transform 0.2s ease-in-out;
+        -ms-transition: transform 0.2s ease-in-out;
+        -o-transition: transform 0.2s ease-in-out;
+      }
+    }
+
+    &[open] > summary svg {
+      transform: rotate(-90deg);
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+    }
+  }
+}

@@ -1,0 +1,68 @@
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+
+  &__input {
+    width: 100%;
+  }
+
+  &__input input {
+    width: 0;
+    padding-left: 0;
+    margin-left: auto;
+    border-color: transparent;
+    box-shadow: none;
+    transition: width 0.2s ease-out, padding-left 0.2s ease-out,
+      border 0s linear 0.2s, box-shadow 0s linear 0.2s;
+    -webkit-transition: width 0.2s ease-out, padding-left 0.2s ease-out,
+      border 0s linear 0.2s, box-shadow 0s linear 0.2s;
+    -moz-transition: width 0.2s ease-out, padding-left 0.2s ease-out,
+      border 0s linear 0.2s, box-shadow 0s linear 0.2s;
+    -ms-transition: width 0.2s ease-out, padding-left 0.2s ease-out,
+      border 0s linear 0.2s, box-shadow 0s linear 0.2s;
+    -o-transition: width 0.2s ease-out, padding-left 0.2s ease-out,
+      border 0s linear 0.2s, box-shadow 0s linear 0.2s;
+
+    &::-webkit-search-cancel-button {
+      font-size: 1.1rem;
+    }
+  }
+
+  &__input--expanded input {
+    width: 100%;
+    border-color: var(--secondary-color, $color-secondary);
+    box-shadow: 0 0.125rem 0.2rem rgba($color-black, 0.5);
+    padding-left: 0.5rem;
+    transition: width 0.2s ease-in, padding-left 0.2s ease-in, border 0s linear;
+    -webkit-transition: width 0.2s ease-in, padding-left 0.2s ease-in,
+      border 0s linear, box-shadow 0s linear;
+    -moz-transition: width 0.2s ease-in, padding-left 0.2s ease-in,
+      border 0s linear, box-shadow 0s linear;
+    -ms-transition: width 0.2s ease-in, padding-left 0.2s ease-in,
+      border 0s linear, box-shadow 0s linear;
+    -o-transition: width 0.2s ease-in, padding-left 0.2s ease-in,
+      border 0s linear, box-shadow 0s linear;
+  }
+
+  button {
+    padding: 0 0.5rem;
+    margin-left: 0.35rem;
+  }
+}
+
+@media only screen and (min-width: $xs) {
+  .search {
+    width: max-content;
+    margin-left: auto;
+
+    &__input {
+      width: max-content;
+    }
+
+    &__input--expanded input {
+      width: 15rem;
+    }
+  }
+}

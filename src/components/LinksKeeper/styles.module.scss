@@ -1,0 +1,32 @@
+.links-keeper {
+  width: 100%;
+  min-height: 100vh;
+  height: max-content;
+  color: var(--font-color, $color-font);
+  font: inherit;
+  background-color: var(--primary-color, $color-primary);
+  color: var(--font-color, $color-font);
+  height: 100vh;
+  position: fixed;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  & > * {
+    padding: 2rem $horizontal-padding 1rem;
+    max-width: 40rem;
+    overflow: scroll;
+    height: 100%;
+    background-color: var(--primary-color, $color-primary);
+  }
+}
+
+@media only screen and (min-width: $sm) {
+  .links-keeper {
+    & > * {
+      padding: 4rem $horizontal-padding 2rem;
+    }
+  }
+}

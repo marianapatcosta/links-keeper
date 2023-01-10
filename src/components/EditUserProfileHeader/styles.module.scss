@@ -1,0 +1,107 @@
+.edit-user-profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  position: relative;
+
+  input[type='file'] {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+
+  &__top {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    width: 100%;
+
+    & > button {
+      height: 5rem;
+      width: 5rem;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      grid-column: 2;
+    }
+  }
+
+  &__input {
+    width: 100%;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+
+    & > div {
+      margin-left: auto;
+    }
+  }
+
+  &__remove {
+    font-size: $font-small;
+    margin-top: auto;
+    padding: 0 0.5rem;
+
+    svg {
+      vertical-align: -1.5rem;
+    }
+  }
+
+  &__no-avatar {
+    height: 100%;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    box-shadow: 0 0.1rem 0.4rem 0.3rem rgba($color-black, 0.5);
+
+    > p {
+      margin-top: 0.3rem;
+      font-size: $font-tiny;
+      color: rgba($color-white, 0.5);
+    }
+  }
+
+  &__user {
+    color: rgba($color-white, 0.5);
+    font-size: 2.5rem;
+  }
+
+  &__error {
+    color: $color-red;
+  }
+
+  &__success {
+    color: $color-green;
+  }
+}
+
+@media only screen and (min-width: $sm) {
+  .edit-user-profile-header {
+    &__top {
+      & > button {
+        height: 7rem;
+        width: 7rem;
+      }
+    }
+
+    &__no-avatar {
+      p {
+        font-size: $font-small;
+        margin-top: 0.5rem;
+      }
+    }
+
+    &__user {
+      font-size: 4rem;
+    }
+  }
+}
