@@ -1,0 +1,11 @@
+export declare const share: (url: string, title?: string, text?: string) => Promise<void>;
+export declare const isPhoneNumber: (url: string) => boolean;
+export declare const isEmail: (url: string) => boolean;
+export declare const isUrl: (url: string) => boolean;
+export declare const isHexColor: (color: string) => boolean;
+export declare const isValidBase64ImageUrl: (url: string) => boolean;
+export declare const lighten: (hex: string, percent: number) => string;
+export declare const darken: (hex: string, percent: number) => string;
+export declare const convertImageUrlIntoBase64: (imageUrl: string) => Promise<string | null>;
+export declare const generateRandomId: () => string;
+export declare const isTouchDevice: () => boolean;
