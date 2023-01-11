@@ -186,3 +186,7 @@ Build a production-ready application.
 ### `yarn preview`
 
 Runs the production build locally
+
+### `yarn deploy`
+
+Deploys Demo page to github pages

@@ -7,6 +7,7 @@ import dts from 'vite-plugin-dts'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/links-keeper/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
