@@ -2,7 +2,6 @@
   p {
     margin-bottom: 0.25rem;
   }
-
   input {
     display: block;
     width: 100%;
@@ -19,6 +18,21 @@
     -o-border-radius: 0.5rem;
     box-shadow: 0 0.125rem 0.2rem rgba($color-black, 0.5);
     padding-left: 0.5rem;
+
+    &::placeholder {
+      color: inherit;
+      opacity: 0.5;
+    }
+
+    &:-ms-input-placeholder {
+      color: inherit;
+      opacity: 0.5;
+    }
+
+    &::-ms-input-placeholder {
+      color: inherit;
+      opacity: 0.5;
+    }
 
     &:disabled {
       user-select: none;

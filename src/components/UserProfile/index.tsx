@@ -77,8 +77,8 @@ const UserProfile: React.FC<UserProfileProps> = ({
           </div>
         ) : (
           <NoLinks
-            sentence={`No links to display\n ${
-              !!isSearching ? 'Please change search keywords' : ''
+            sentence={`No links to display ${
+              !!isSearching ? '. Please change search keywords.' : ''
             }`}
             showAddButton={!isSearching}
             onAddNewLink={onOpenEditMode}

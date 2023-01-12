@@ -5,16 +5,9 @@
   }
 
   > button {
-    width: 10rem;
+    width: 9rem;
     margin: auto;
     display: block;
   }
 }
 
-@media only screen and (min-width: $sm) {
-  .no-links {
-    > p {
-      font-size: $font-medium;
-    }
-  }
-}

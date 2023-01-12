@@ -38,99 +38,9 @@ export const COLLECTION_USER_DATA = `${DATABASE_NAME}:user-data`
 
 export const LINK_ICONS_METADATA = [
   {
-    label: 'E-mail',
-    value: 'mail',
-    icon: faEnvelope,
-  },
-  {
-    label: 'Phone',
-    value: 'phone',
-    icon: faMobileScreen,
-  },
-  {
-    label: 'Portfolio',
-    value: 'portfolio',
-    icon: faBriefcase,
-  },
-  {
-    label: 'LinkedIn',
-    value: 'linkedin',
-    icon: faLinkedin,
-  },
-  {
-    label: 'WhatsApp',
-    value: 'whatsapp',
-    icon: faWhatsapp,
-  },
-  {
-    label: 'Telegram',
-    value: 'telegram',
-    icon: faTelegram,
-  },
-  {
-    label: 'Discord',
-    value: 'discord',
-    icon: faDiscord,
-  },
-  {
-    label: 'Reddit',
-    value: 'reddit',
-    icon: faReddit,
-  },
-  {
-    label: 'Instagram',
-    value: 'instagram',
-    icon: faInstagram,
-  },
-  {
-    label: 'Twitter',
-    value: 'twitter',
-    icon: faTwitter,
-  },
-  {
-    label: 'Figma',
-    value: 'figma',
-    icon: faFigma,
-  },
-  {
-    label: 'Dribbble',
-    value: 'dribbble',
-    icon: faDribbble,
-  },
-  {
-    label: 'TikTok',
-    value: 'tiktok',
-    icon: faTiktok,
-  },
-  {
-    label: 'Twitch',
-    value: 'twitch',
-    icon: faTwitch,
-  },
-  {
-    label: 'Youtube',
-    value: 'youtube',
-    icon: faYoutube,
-  },
-  {
-    label: 'GitHub',
-    value: 'github',
-    icon: faGithub,
-  },
-  {
-    label: 'Mastodon',
-    value: 'mastodon',
-    icon: faMastodon,
-  },
-  {
-    label: 'StackOverflow',
-    value: 'stackoverflow',
-    icon: faStackOverflow,
-  },
-  {
-    label: 'Patreon',
-    value: 'patreon',
-    icon: faPatreon,
+    label: 'Apple Store',
+    value: 'apple',
+    icon: faApple,
   },
   {
     label: 'Blog',
@@ -138,9 +48,39 @@ export const LINK_ICONS_METADATA = [
     icon: faBlog,
   },
   {
-    label: 'Apple Store',
-    value: 'apple',
-    icon: faApple,
+    label: 'Discord',
+    value: 'discord',
+    icon: faDiscord,
+  },
+  {
+    label: 'Dribbble',
+    value: 'dribbble',
+    icon: faDribbble,
+  },
+  {
+    label: 'E-mail',
+    value: 'mail',
+    icon: faEnvelope,
+  },
+  {
+    label: 'Figma',
+    value: 'figma',
+    icon: faFigma,
+  },
+  {
+    label: 'GitHub',
+    value: 'github',
+    icon: faGithub,
+  },
+  {
+    label: 'Google Drive',
+    value: 'drive.google',
+    icon: faGoogleDrive,
+  },
+  {
+    label: 'Instagram',
+    value: 'instagram',
+    icon: faInstagram,
   },
   {
     label: 'iTunes',
@@ -148,29 +88,14 @@ export const LINK_ICONS_METADATA = [
     icon: faApple,
   },
   {
-    label: 'Spotify',
-    value: 'spotify',
-    icon: faSpotify,
+    label: 'LinkedIn',
+    value: 'linkedin',
+    icon: faLinkedin,
   },
   {
-    label: 'Shopify',
-    value: 'shopify',
-    icon: faShopify,
-  },
-  {
-    label: 'Shop',
-    value: 'shop',
-    icon: faCartShopping,
-  },
-  {
-    label: 'Play Store',
-    value: 'play.google',
-    icon: faGooglePlay,
-  },
-  {
-    label: 'Google Drive',
-    value: 'drive.google',
-    icon: faGoogleDrive,
+    label: 'Mastodon',
+    value: 'mastodon',
+    icon: faMastodon,
   },
   {
     label: 'Other',
@@ -186,6 +111,81 @@ export const LINK_ICONS_METADATA = [
     label: 'Other',
     value: 'user',
     icon: faUser,
+  },
+  {
+    label: 'Patreon',
+    value: 'patreon',
+    icon: faPatreon,
+  },
+  {
+    label: 'Phone',
+    value: 'phone',
+    icon: faMobileScreen,
+  },
+  {
+    label: 'Play Store',
+    value: 'play.google',
+    icon: faGooglePlay,
+  },
+  {
+    label: 'Portfolio',
+    value: 'portfolio',
+    icon: faBriefcase,
+  },
+  {
+    label: 'Reddit',
+    value: 'reddit',
+    icon: faReddit,
+  },
+  {
+    label: 'Shop',
+    value: 'shop',
+    icon: faCartShopping,
+  },
+  {
+    label: 'Shopify',
+    value: 'shopify',
+    icon: faShopify,
+  },
+  {
+    label: 'Spotify',
+    value: 'spotify',
+    icon: faSpotify,
+  },
+  {
+    label: 'StackOverflow',
+    value: 'stackoverflow',
+    icon: faStackOverflow,
+  },
+  {
+    label: 'Telegram',
+    value: 'telegram',
+    icon: faTelegram,
+  },
+  {
+    label: 'TikTok',
+    value: 'tiktok',
+    icon: faTiktok,
+  },
+  {
+    label: 'Twitch',
+    value: 'twitch',
+    icon: faTwitch,
+  },
+  {
+    label: 'Twitter',
+    value: 'twitter',
+    icon: faTwitter,
+  },
+  {
+    label: 'WhatsApp',
+    value: 'whatsapp',
+    icon: faWhatsapp,
+  },
+  {
+    label: 'Youtube',
+    value: 'youtube',
+    icon: faYoutube,
   },
 ]
 

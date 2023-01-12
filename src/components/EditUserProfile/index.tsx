@@ -179,7 +179,7 @@ const EditUserProfile: React.FC<EditUserProfileProps> = ({
         ) : (
           <NoLinks
             sentence={`No links to display. ${
-              !!isSearching ? 'Please change search keywords.' : ''
+              !!isSearching ? '. Please change search keywords.' : ''
             }`}
             showAddButton={!isSearching}
             onAddNewLink={onAddLink}
