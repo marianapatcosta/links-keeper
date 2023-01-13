@@ -34,7 +34,7 @@ const LinksKeeper: React.FC<LinksKeeperProps> = ({
       }`}
       style={cssVars}
     >
-      {true ? (
+      {isEditMode ? (
         <EditUserProfile
           profile={profile}
           colors={colors}
