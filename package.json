@@ -2,7 +2,7 @@
   "name": "@marianapatcosta/links-keeper",
   "author": "Mariana Costa",
   "description": "LinksKeeper is a package to group, manage and display all your network links in the same place.",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "license": "MIT",
   "repository": {
     "type": "git",

@@ -1,5 +1,6 @@
 .qrcode-display {
   margin: 0 auto;
+  background-color: var(--primary-color, $color-primary);
 
   &__image-wrapper {
     position: relative;

@@ -42,16 +42,18 @@ const QRCodeModal: React.FC<QRCodeModalProps> = ({
     try {
       setIsPrinting(true)
       const isMobileScreen = window.matchMedia('(max-width: 480px)').matches
-      
+
       const dataUrl = await toPng(modalRef.current, {
         quality: 1,
         pixelRatio: 1,
         style: {
-          marginTop: isMobileScreen
-            ? `-${(modalRef.current as HTMLDivElement).offsetTop}px`
-            : '0',
+          margin: '0',
+          marginTop:
+            isMobileScreen && base64AvatarUrl
+              ? `-${(modalRef.current as HTMLDivElement).offsetTop}px`
+              : '0',
           borderRadius: '0',
-          paddingBottom: '0.75rem 1rem',
+          padding: '2px',
         },
       })
       const link = document.createElement('a')
@@ -63,7 +65,7 @@ const QRCodeModal: React.FC<QRCodeModalProps> = ({
     } finally {
       setIsPrinting(false)
     }
-  }, [label, username])
+  }, [label, username, base64AvatarUrl])
 
   const shareLink = useCallback(async () => {
     await share(

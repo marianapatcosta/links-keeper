@@ -31,7 +31,7 @@ const AvatarHeader: React.FC<AvatarProps> = ({
       }`}
     >
       {!!src && <Avatar src={src} alt={alt} {...rest} />}
-      <div>
+      <div className={`${styles['avatar-header__text']}`}>
         {!!heading && <h1>{heading}</h1>}
         {!!subHeading && <p>{subHeading}</p>}
       </div>

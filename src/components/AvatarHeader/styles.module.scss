@@ -6,6 +6,10 @@
   text-align: center;
   position: relative;
 
+  &__text {
+    width: 100%;
+  }
+
   h1 {
     font-size: $font-large;
   }
