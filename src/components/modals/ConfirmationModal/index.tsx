@@ -1,8 +1,6 @@
 import { useCallback } from 'react'
-import { Modal } from '../Modal'
+import { Button, Modal } from '@/components'
 import styles from './styles.module.scss'
-import { Button } from '../Button'
-
 interface ConfirmationModalProps {
   title?: string
   question?: string

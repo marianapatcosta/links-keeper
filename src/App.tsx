@@ -32,7 +32,7 @@ function App() {
   return (
     <div className={styles.app}>
       <LinksKeeper
-        profile={demoProfile}
+    /*     profile={demoProfile} */
         /*  colors={{ primary: '#ff0000', secondary: '#00ff00', font: '#0000ff' }} */
       />
     </div>

@@ -2,7 +2,7 @@ import { FormEvent, memo } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEyeDropper } from '@fortawesome/free-solid-svg-icons'
 import type { ColorSettings } from '@/types'
-import { Input } from '../Input'
+import { Input } from '@/components'
 import styles from './styles.module.scss'
 
 interface ColorsPickerProps {

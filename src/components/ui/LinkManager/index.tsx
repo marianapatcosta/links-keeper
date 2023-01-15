@@ -1,9 +1,9 @@
 import { HTMLAttributes } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons'
+import { Button } from '@/components'
 import { Link } from '@/types'
 import { isTouchDevice } from '@/utils/helper-functions'
-import { Button } from '../Button'
 import styles from './styles.module.scss'
 
 interface LinkManagerProps extends HTMLAttributes<HTMLDivElement> {

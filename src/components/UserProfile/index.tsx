@@ -1,13 +1,15 @@
 import { useCallback, useState } from 'react'
 import { faEdit, faShareNodes } from '@fortawesome/free-solid-svg-icons'
+import {
+  AvatarHeader,
+  Button,
+  LinkDisplay,
+  NoLinks,
+  QRCodeModal,
+} from '@/components'
 import { useSearchLinks } from '@/hooks/useSearchLinks'
 import type { Link, Profile } from '@/types'
 import { share } from '@/utils/helper-functions'
-import { AvatarHeader } from '../AvatarHeader'
-import { Button } from '../Button'
-import { LinkDisplay } from '../LinkDisplay'
-import { NoLinks } from '../NoLinks'
-import { QRCodeModal } from '../QRCodeModal'
 import styles from './styles.module.scss'
 
 interface UserProfileProps {

@@ -21,6 +21,16 @@ export default defineConfig({
       },
     },
   },
+  esbuild: {
+    drop: ['debugger'],
+    pure: [
+      'console.log',
+      'console.error',
+      'console.warn',
+      'console.debug',
+      'console.trace',
+    ],
+  },
   build: {
     target: 'esnext',
     manifest: true,

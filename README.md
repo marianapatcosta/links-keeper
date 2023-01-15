@@ -182,6 +182,7 @@ Open [http://localhost:5173](http://localhost:5173) with your browser to see the
 ### `yarn build`
 
 Build a production-ready application.
+Note: for building demo page, remove **build** field in `vite.config.ts` file.
 
 ### `yarn preview`
 

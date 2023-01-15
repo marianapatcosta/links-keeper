@@ -1,16 +1,13 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { faShareNodes, faDownload } from '@fortawesome/free-solid-svg-icons'
 import { toPng } from 'html-to-image'
+import { AvatarHeader, Button, Modal, QRCodeDisplay } from '@/components'
 import { Link } from '@/types'
 import {
   share,
   convertImageUrlIntoBase64,
   isValidBase64ImageUrl,
 } from '@/utils/helper-functions'
-import { AvatarHeader } from '../AvatarHeader'
-import { Button } from '../Button'
-import { Modal } from '../Modal'
-import { QRCodeDisplay } from '../QRCodeDisplay'
 import styles from './styles.module.scss'
 
 interface QRCodeModalProps {

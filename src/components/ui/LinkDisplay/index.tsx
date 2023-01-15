@@ -7,7 +7,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-solid-svg-icons'
 import { Link } from '@/types'
-import { Button } from '../Button'
+import { Button } from '@/components'
 import styles from './styles.module.scss'
 
 interface LinkDisplayProps

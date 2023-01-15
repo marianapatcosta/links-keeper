@@ -1,5 +1,13 @@
 import { ChangeEvent, FormEvent, useCallback, useState } from 'react'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import {
+  Button,
+  ColorsPicker,
+  EditUserProfileModal,
+  EditUserProfileHeader,
+  LinkManager,
+  NoLinks,
+} from '@/components'
 import { useDragAndDrop } from '@/hooks/useDragAndDrop'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { useSearchLinks } from '@/hooks/useSearchLinks'
@@ -12,12 +20,6 @@ import type {
 } from '@/types'
 import { COLLECTION_USER_DATA, imageTypes } from '@/utils/constants'
 import { isValidBase64ImageUrl } from '@/utils/helper-functions'
-import { Button } from '../Button'
-import { ColorsPicker } from '../ColorsPicker'
-import { EditUserProfileHeader } from '../EditUserProfileHeader'
-import { EditUserProfileModal } from '../EditUserProfileModal'
-import { LinkManager } from '../LinkManager'
-import { NoLinks } from '../NoLinks'
 import styles from './styles.module.scss'
 
 interface EditUserProfileProps {
@@ -40,7 +42,10 @@ const EditUserProfile: React.FC<EditUserProfileProps> = ({
   const [links, setLinks] = useState(
     !!profile?.links ? [...profile.links] : ([] as Link[])
   )
-  const [avatarUrl, setAvatarUrl] = useState(profile?.avatarUrl || '')
+  const [avatarUrl, setAvatarUrl] = useState({
+    value: profile?.avatarUrl || '',
+    error: '',
+  })
   const [username, setUsername] = useState(profile?.username || '')
   const [colors, setColors] = useState(
     !!baseColors ? { ...baseColors } : { primary: '', secondary: '', font: '' }
@@ -83,7 +88,7 @@ const EditUserProfile: React.FC<EditUserProfileProps> = ({
 
   const saveChanges = useCallback(() => {
     const updatedData = {
-      profile: { links, avatarUrl, username },
+      profile: { links, avatarUrl: avatarUrl.value, username },
       colors,
     }
     saveItemInStorage<UserData>(COLLECTION_USER_DATA, updatedData)
@@ -115,26 +120,45 @@ const EditUserProfile: React.FC<EditUserProfileProps> = ({
     []
   )
 
-  const removeAvatar = useCallback(() => setAvatarUrl(''), [])
+  const removeAvatar = useCallback(
+    () => setAvatarUrl({ value: '', error: '' }),
+    []
+  )
 
   const onAvatarUpload = useCallback((event: ChangeEvent<HTMLInputElement>) => {
     if (!event.target.files) {
       return
     }
-
+    const MAX_FILE_SIZE = 1000000
     const file = event.target.files[0]
+    if (file.size > MAX_FILE_SIZE) {
+      setAvatarUrl((prevState) => ({
+        ...prevState,
+        error: 'The file is too big (max 1Mb).',
+      }))
+      return
+    }
+
     const fileType = `.${file.type.split('/').pop()}`.toLowerCase()
     if (!imageTypes.includes(fileType)) {
-      return alert('The file type is invalid! Please upload an image!')
+      setAvatarUrl((prevState) => ({
+        ...prevState,
+        error: 'The file type is invalid! Please upload an image!',
+      }))
+      return
     }
     const reader = new FileReader()
     reader.onloadend = () => {
       const result = reader.result as string
       if (!isValidBase64ImageUrl(result)) {
         event.target.value = ''
-        return alert('The file is corrupted. Please upload a valid image!')
+        setAvatarUrl((prevState) => ({
+          ...prevState,
+          error: 'The file is corrupted. Please upload a valid image',
+        }))
+        return
       }
-      setAvatarUrl(result)
+      setAvatarUrl({ value: result, error: '' })
       event.target.value = ''
     }
 
@@ -150,7 +174,8 @@ const EditUserProfile: React.FC<EditUserProfileProps> = ({
   return (
     <div className={`${styles['edit-user-profile']}`}>
       <EditUserProfileHeader
-        avatarUrl={avatarUrl}
+        avatarUrl={avatarUrl.value}
+        avatarUrlError={avatarUrl.error}
         username={username}
         onAvatarUpload={onAvatarUpload}
         onChangeUsername={updateUsername}

@@ -1,5 +1,5 @@
 import { DetailedHTMLProps, ImgHTMLAttributes, ReactNode } from 'react'
-import { Avatar } from '../Avatar'
+import { Avatar } from '@/components'
 import styles from './styles.module.scss'
 
 interface AvatarProps

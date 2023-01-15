@@ -1,7 +1,6 @@
 import { memo, ReactElement } from 'react'
 import type { Link, Modal, Modal as ModalType } from '@/types'
-import { AddEditLinkModal } from '@/components/AddEditLinkModal'
-import { ConfirmationModal } from '@/components/ConfirmationModal'
+import { AddEditLinkModal, ConfirmationModal } from '@/components'
 
 interface EditUserProfileProps {
   isModalClosing: boolean

@@ -7,13 +7,12 @@ import {
   faXmark,
 } from '@fortawesome/free-solid-svg-icons'
 import { imageTypes } from '@/utils/constants'
-import { Avatar } from '../Avatar'
-import { Button } from '../Button'
-import { Input } from '../Input'
+import { Avatar, Button, Input } from '@/components'
 import styles from './styles.module.scss'
 
 interface EditUserProfileHeaderProps {
   avatarUrl: string
+  avatarUrlError?: string
   username: string
   onRemoveAvatar: () => void
   onAvatarUpload: (event: ChangeEvent<HTMLInputElement>) => void
@@ -25,6 +24,7 @@ interface EditUserProfileHeaderProps {
 const EditUserProfileHeader: React.FC<EditUserProfileHeaderProps> = memo(
   ({
     avatarUrl,
+    avatarUrlError,
     username,
     onRemoveAvatar,
     onAvatarUpload,
@@ -91,6 +91,11 @@ const EditUserProfileHeader: React.FC<EditUserProfileHeaderProps> = memo(
               />
             </div>
           </div>
+          {!!avatarUrlError && (
+            <p className={styles['edit-user-profile-header__error']}>
+              {avatarUrlError}
+            </p>
+          )}
         </div>
         <Input
           autoComplete='off'

@@ -1,7 +1,6 @@
 import React, { ChangeEvent, memo, HTMLProps, useRef, useState } from 'react'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
-import { Button } from '../Button'
-import { Input } from '../Input'
+import { Button, Input } from '@/components'
 import styles from './styles.module.scss'
 
 interface SearchProps extends HTMLProps<HTMLInputElement> {

@@ -1,7 +1,6 @@
 import { FormEvent, useCallback, useMemo, useState } from 'react'
 import { faSave, IconDefinition } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { LINK_ICONS_METADATA, linkIcons } from '@/utils/constants'
 import {
   validate,
   VALIDATOR_EMAIL_PHONE_NUMBER_OR_URL,
@@ -9,12 +8,10 @@ import {
   VALIDATOR_REQUIRE,
 } from '@/utils/validators'
 import type { FormValidator, Link } from '@/types'
-import { Button } from '../Button'
-import { Input } from '../Input'
-import { Modal } from '../Modal'
-import { Select } from '../Select'
-import styles from './styles.module.scss'
+import { Button, Input, Modal, Select } from '@/components'
+import { LINK_ICONS_METADATA, linkIcons } from '@/utils/constants'
 import { generateRandomId } from '@/utils/helper-functions'
+import styles from './styles.module.scss'
 
 interface AddEditLinkModalProps {
   selectedLink: Link | null
