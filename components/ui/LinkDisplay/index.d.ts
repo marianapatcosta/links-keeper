@@ -1,5 +1,5 @@
 import { AnchorHTMLAttributes, DetailedHTMLProps } from 'react';
-import { Link } from '../../types';
+import { Link } from '../../../types';
 interface LinkDisplayProps extends DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement> {
     link: Link;
     onSelectLink: () => void;

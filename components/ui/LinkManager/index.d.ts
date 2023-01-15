@@ -1,5 +1,5 @@
 import { HTMLAttributes } from 'react';
-import { Link } from '../../types';
+import { Link } from '../../../types';
 interface LinkManagerProps extends HTMLAttributes<HTMLDivElement> {
     link: Link;
     additionalClass?: string;

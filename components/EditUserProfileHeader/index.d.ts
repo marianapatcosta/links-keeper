@@ -1,6 +1,7 @@
 import { ChangeEvent } from 'react';
 interface EditUserProfileHeaderProps {
     avatarUrl: string;
+    avatarUrlError?: string;
     username: string;
     onRemoveAvatar: () => void;
     onAvatarUpload: (event: ChangeEvent<HTMLInputElement>) => void;

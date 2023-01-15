@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import type { Link } from '../../types';
+import type { Link } from '../../../types';
 interface AddEditLinkModalProps {
     selectedLink: Link | null;
     onAddLink: (link: Link) => void;

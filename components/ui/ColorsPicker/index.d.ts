@@ -1,5 +1,5 @@
 import { FormEvent } from 'react';
-import type { ColorSettings } from '../../types';
+import type { ColorSettings } from '../../../types';
 interface ColorsPickerProps {
     title?: string;
     colors: ColorSettings;

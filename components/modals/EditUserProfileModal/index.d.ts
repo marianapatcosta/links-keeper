@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import type { Link, Modal } from '../../types';
+import type { Link, Modal } from '../../../types';
 interface EditUserProfileProps {
     isModalClosing: boolean;
     modalType: Modal | null;

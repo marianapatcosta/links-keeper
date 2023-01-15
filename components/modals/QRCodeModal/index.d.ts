@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import { Link } from '../../types';
+import { Link } from '../../../types';
 interface QRCodeModalProps {
     avatarUrl?: string;
     username?: string;
