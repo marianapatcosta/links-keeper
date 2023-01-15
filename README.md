@@ -7,7 +7,9 @@ It is available in 2 modes: **Static mode** and **Dynamic mode**, which are conf
 
 A Static demo is deployed [here](https://marianapatcosta.github.io/links-keeper).
 
-A Dynamic demo is deployed as an installable, offline-first PWA [here](https://linkskeeper.web.app/).
+A Dynamic demo is deployed as an installable, offline-first PWA [here](https://linkskeeper.web.app/). 
+
+Download from [Google Play Store ](https://play.google.com/store/apps/details?id=app.web.linkskeeper).
 
 ## Installation
 
